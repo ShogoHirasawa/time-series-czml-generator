@@ -1,6 +1,6 @@
 import json
 
-geojson_path = "./sample_data/MultiPoints.geojson"  # Input GeoJSON file path
+geojson_path = "./sample_data/Polygon.geojson"  # Input GeoJSON file path
 czml_path = "output.czml"  # Output CZML file path
 
 with open(geojson_path, "r", encoding="utf-8") as file:
@@ -28,21 +28,21 @@ for feature in geojson_data.get("features", []):
         continue
 
         if geometry_type == "Point":
-        entity_id = f"data{entity_counter:03}" 
-        entity_counter += 1
+          entity_id = f"data{entity_counter:03}" 
+          entity_counter += 1
         
-        entity = {
-            "id": entity_id,
-            "name": entity_id,
-            "availability": f"{start_time}/{end_time}",
-            "position": {
-                "cartographicDegrees": [coordinates[0], coordinates[1], 0]  
-            },
-            "point": {
-                "color": {"rgba": [255, 0, 0, 128]},
-                "pixelSize": 10  
-            }
-        }
+          entity = {
+              "id": entity_id,
+              "name": entity_id,
+              "availability": f"{start_time}/{end_time}",
+              "position": {
+                  "cartographicDegrees": [coordinates[0], coordinates[1], 0]  
+              },
+              "point": {
+                  "color": {"rgba": [255, 0, 0, 128]},
+                  "pixelSize": 10  
+              }
+          }
         czml.append(entity)
 
     elif geometry_type == "MultiPoint":
