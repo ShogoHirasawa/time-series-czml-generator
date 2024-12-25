@@ -41,41 +41,24 @@ for feature in geojson_data.get("features", []):
     if geometry_type == "GeometryCollection":
         continue
 
-        if geometry_type == "Point":
-          entity_id = f"data{entity_counter:03}" 
-          entity_counter += 1
-        
-          entity = {
-              "id": entity_id,
-              "name": entity_id,
-              "availability": f"{start_time}/{end_time}",
-              "position": {
-                  "cartographicDegrees": [coordinates[0], coordinates[1], 0]  
-              },
-              "point": {
-                  "color": {"rgba": [255, 0, 0, 128]},
-                  "pixelSize": 10  
-              }
-          }
-        czml.append(entity)
-
-    elif geometry_type == "MultiPoint":
-        for coord in geometry["coordinates"]:
-            entity_id = f"data{entity_counter:03}"
-            entity_counter += 1
-            entity = {
-                "id": entity_id,
-                "name": entity_id,
-                "availability": f"{start_time}/{end_time}",
-                "position": {
-                    "cartographicDegrees": [coord[0], coord[1], 0]
-                },
-                "point": {
-                    "color": {"rgba": [255, 0, 0, 128]},
-                    "pixelSize": 10
-                }
+    if geometry_type == "Point":
+        coordinates = geometry["coordinates"]
+        entity_id = f"data{entity_counter:03}" 
+        entity_counter += 1
+    
+        entity = {
+            "id": entity_id,
+            "name": entity_id,
+            "availability": f"{start_time}/{end_time}",
+            "position": {
+                "cartographicDegrees": [coordinates[0], coordinates[1], 0]  
+            },
+            "point": {
+                "color": {"rgba": [255, 0, 0, 128]},
+                "pixelSize": 10  
             }
-            czml.append(entity)
+        }
+        czml.append(entity)
 
     elif geometry_type in ["LineString", "MultiLineString", "Polygon", "MultiPolygon"]:
         positions = []
