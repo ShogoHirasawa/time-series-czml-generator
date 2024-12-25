@@ -50,6 +50,5 @@ for feature in geojson_data.get("features", []):
         }
         czml.append(entity)
 
-# CZMLを出力
 with open(czml_path, "w", encoding="utf-8") as file:
     json.dump(czml, file, indent=2, ensure_ascii=False)
