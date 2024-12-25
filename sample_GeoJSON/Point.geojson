@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "start_time": "2024-12-24T01:00:10Z",
+        "end_time": "2024-12-24T01:00:15Z"
+      },
+      "geometry": {
+        "coordinates": [17.9863921052511, 19.100758679601213],
+        "type": "Point"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "start_time": "2024-12-24T01:00:05Z",
+        "end_time": "2024-12-24T01:00:10Z"
+      },
+      "geometry": {
+        "coordinates": [25.210410327184007, 9.996638141741258],
+        "type": "Point"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "start_time": "2024-12-24T01:00:00Z",
+        "end_time": "2024-12-24T01:00:05Z"
+      },
+      "geometry": {
+        "coordinates": [13.829212263469458, 10.42019649221325],
+        "type": "Point"
+      },
+      "id": 2
+    }
+  ]
+}

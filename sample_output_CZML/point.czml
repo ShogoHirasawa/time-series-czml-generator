@@ -1,0 +1,76 @@
+[
+  {
+    "id": "document",
+    "name": "CZML from GeoJSON",
+    "version": "1.0"
+  },
+  {
+    "id": "data001",
+    "name": "data001",
+    "availability": "2024-12-24T01:00:10Z/2024-12-24T01:00:15Z",
+    "position": {
+      "cartographicDegrees": [
+        17.9863921052511,
+        19.100758679601213,
+        0
+      ]
+    },
+    "point": {
+      "color": {
+        "rgba": [
+          255,
+          0,
+          0,
+          128
+        ]
+      },
+      "pixelSize": 10
+    }
+  },
+  {
+    "id": "data002",
+    "name": "data002",
+    "availability": "2024-12-24T01:00:05Z/2024-12-24T01:00:10Z",
+    "position": {
+      "cartographicDegrees": [
+        25.210410327184007,
+        9.996638141741258,
+        0
+      ]
+    },
+    "point": {
+      "color": {
+        "rgba": [
+          255,
+          0,
+          0,
+          128
+        ]
+      },
+      "pixelSize": 10
+    }
+  },
+  {
+    "id": "data003",
+    "name": "data003",
+    "availability": "2024-12-24T01:00:00Z/2024-12-24T01:00:05Z",
+    "position": {
+      "cartographicDegrees": [
+        13.829212263469458,
+        10.42019649221325,
+        0
+      ]
+    },
+    "point": {
+      "color": {
+        "rgba": [
+          255,
+          0,
+          0,
+          128
+        ]
+      },
+      "pixelSize": 10
+    }
+  }
+]
