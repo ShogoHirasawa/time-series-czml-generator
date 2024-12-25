@@ -1,7 +1,21 @@
 import json
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename
 
-geojson_path = "./sample_data/Polygon.geojson"  # Input GeoJSON file path
-czml_path = "output.czml"  # Output CZML file path
+def select_geojson_file():
+    root = Tk()
+    root.withdraw() 
+    file_path = askopenfilename(
+        title="Select a GeoJSON file",
+        filetypes=[("GeoJSON files", "*.geojson")], 
+    )
+    return file_path
+
+geojson_path = select_geojson_file()
+if not geojson_path:
+    exit()
+
+czml_path = "output.czml"  
 
 with open(geojson_path, "r", encoding="utf-8") as file:
     geojson_data = json.load(file)
