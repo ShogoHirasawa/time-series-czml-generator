@@ -1,6 +1,6 @@
 # time-series-czml-generator
 
-### What is this tool
+### What is this tool for
 This is a Python script to convert GeoJSON with timestamps to CZML for time series data.
 <img src="src/gif001.gif" width="400">   
 <img src="src/gif002.gif" width="400">  
